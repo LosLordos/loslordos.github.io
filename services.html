@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="cs">
+
+
+ 
+    <title>Elektro Nekvasil</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<head>
+
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <img src="obrazky/logo.png" class="logo">
+        <ul>
+            <li> <a href="index.html">Domů</a> </li>
+            <li> <a href="about.html">O nás</a> </li>
+            <li> <a href="services.html">Služby</a> </li>
+            <li> <a href="references.html">Reference</a> </li>
+            <li> <a href="contact.html">Kontakty</a> </li>
+        </ul>
+    </div>
+
+
+    <div class="offer-section">
+        <h1>Co nabízíme?</h1>
+        <ul class="jobs">
+            <li onclick="openModal('modal1')">
+                <h3>Elektromontáže slaboproudé</h3>
+                <p>Komplexní instalace slaboproudých systémů...</p>
+            </li>
+            <li onclick="openModal('modal2')">
+                <h3>Elektromontáže silnoproudé</h3>
+                <p>Silnoproudé instalace pro průmyslové objekty...</p>
+            </li>
+            <li onclick="openModal('modal3')">
+                <h3>Veškeré elektro rozvody</h3>
+                <p>Navrhneme a realizujeme elektro rozvody...</p>
+            </li>
+            <li onclick="openModal('modal4')">
+                <h3>Bytová výstavba</h3>
+                <p>Poskytujeme profesionální elektroinstalace...</p>
+            </li>
+            <li onclick="openModal('modal5')">
+                <h3>Výměna HDV</h3>
+                <p>Rychlá a kvalitní výměna hlavního domovního vedení...</p>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Elektromontáže slaboproudé</h2>
+            <p>Specializujeme se na elektromontáže slaboproudé, které zahrnují instalace systémů pro telekomunikace, zabezpečení, počítačové sítě, audio a video systémy. Naše služby zahrnují i integraci automatizačních a řízicích systémů. Používáme moderní technologie a zajišťujeme precizní realizaci, která odpovídá aktuálním trendům a požadavkům zákazníků.</p>
+        </div>
+    </div>
+    
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Elektromontáže silnoproudé</h2>
+            <p>Naše firma provádí elektromontáže silnoproudé pro širokou škálu aplikací. Zajišťujeme instalaci elektrických rozvodů, jističů, hlavních rozváděčů a dalších silnoproudých zařízení pro průmyslové, komerční a bytové objekty. Naši odborníci dbají na bezpečnost a kvalitu, čímž zaručují dlouhodobou a spolehlivou funkčnost elektrických instalací dle platných norem a předpisů.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Veškeré elektro rozvody</h2>
+            <p>Nabízíme komplexní elektro rozvody pro nové stavby i rekonstrukce. Provádíme instalaci veškerých elektrických vedení, zásuvek, vypínačů, osvětlení a rozvodů pro silnoproud i slaboproud. Naši odborníci se postarají o profesionální návrh a realizaci elektroinstalace, která splní všechny bezpečnostní a funkční požadavky a bude šitá na míru vašim potřebám.</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Bytová výstavba</h2>
+            <p>V rámci bytové výstavby provádíme elektroinstalace na klíč od návrhu až po finální realizaci. Naše služby zahrnují instalaci elektro rozvodů, osvětlení, zásuvek, topení, bezpečnostních systémů a dalších zařízení v novostavbách i při rekonstrukcích. Dbáme na vysokou kvalitu a bezpečnostní standardy, což zajišťuje komfortní a bezpečné bydlení pro naše klienty.</p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <h2>Výměna HDV</h2>
+            <p>Nabízíme výměnu hlavních domovních vedení (HDV), která zahrnuje modernizaci elektrických rozvodů, výměnu kabelů a jističů. Provádíme kompletní diagnostiku a návrh optimálního řešení pro zajištění bezpečného připojení k distribuční síti. Naše služby zaručují zvýšení energetické efektivity a dlouhodobou spolehlivost elektroinstalace v domácnostech a komerčních objektech.</p>
+        </div>
+    </div>
+        
+
+  
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>Telefonní číslo: <span>+420 606 918 493</span></p>
+                <p>E-mail: <span>elektro.nekvasil@seznam.cz</span></p>
+                <p>Recenze služeb: <a href="https://www.nejremeslnici.cz/profil/112241-petr-nekvasil" target="_blank">NejŘemeslníci.com</a></p>
+                <p>©2024 by Elektro Nekvasil</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+</body>
+
+<script>
+
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+    }
+    
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+    
+    // Close modal when clicking outside the modal content
+    window.onclick = function (event) {
+        const modals = document.querySelectorAll(".modal");
+        modals.forEach(modal => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    };
+    
+    
+    </script>
+
+
+
+</html>
