@@ -95,8 +95,41 @@
     <h1>Kde působíme?</h1>
 
     <div class="map-container">
-        <img src="obrazky/pusobeni.png" alt="place">
-    </div>
+        <div id="googleMap"></div>
+      </div>
+
+      <script>
+        function myMap() {
+          var mapProp = {
+            center: new google.maps.LatLng(50.014432354396575, 14.489158255199634), 
+            zoom: 8,
+          };
+          var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        
+          // Pin (marker) na dané souřadnice
+          var marker = new google.maps.Marker({
+            position: mapProp.center,
+            map: map,
+            title: "Úhlavská 300/17, Praha 4"
+          });
+        
+          // Kruh (radius) o poloměru 50 km (50,000 m)
+          var circle = new google.maps.Circle({
+            map: map,
+            radius: 50000,  // 50 km v metrech
+            fillColor: "#000000",
+            fillOpacity: 0.2,
+            strokeColor: "#000000",
+            strokeOpacity: 0.5,
+            strokeWeight: 1
+          });
+        
+          // Nastavíme centrum kruhu na souřadnice pinu
+          circle.setCenter(marker.getPosition());
+        }
+      </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzfGjnWokDHie0lQ1jfl-sJfSDVMj358Y&callback=myMap"></script>
 
     <div class="content">
         <p>
@@ -138,7 +171,6 @@
 
 
 <html>    
-
 
 
 <script>
@@ -237,8 +269,10 @@
     // Start auto-slide when the page loads
     startAutoSlide();
     updateDots(); // Initialize the dots
-    
-    
+
+
+
+
     
     </script>
 

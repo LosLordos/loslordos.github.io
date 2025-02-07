@@ -539,6 +539,24 @@ form button:hover {
     background-color: #d64545;
 }
 
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 34px;
+    font-weight: bold;
+    cursor: pointer;
+    color: whitesmoke;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #ff0000;
+}
+
+
 .container {
     display: flex;
     align-items: center;
@@ -908,6 +926,27 @@ section + section {
         width: 10px;
     }
 }
+
+
+  /* Responzivní styl pro mapu */
+  #googleMap {
+    width: 100%; /* Šířka mapy na 100% rodičovského kontejneru */
+    height: 100%; /* Výška mapy na 100% rodičovského kontejneru */
+    max-width: 600px; /* Maximální šířka mapy (pro menší obrazovky) */
+    max-height: 400px; /* Maximální výška mapy */
+    margin: 0 auto; /* Vycentrování mapy na stránce */
+    display: block; /* Umožňuje margin: auto pro vycentrování */
+  }
+
+  /* Pro případ, že je rodičovský kontejner div s definovanou šířkou */
+  .map-container {
+    display: flex;
+    justify-content: center; /* Vycentrování mapy horizontálně */
+    align-items: center; /* Vycentrování mapy vertikálně */
+    height: 50vh;
+    margin-bottom: 20px; 
+  }
+
 
 
 
